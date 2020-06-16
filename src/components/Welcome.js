@@ -4,13 +4,12 @@ export default class Welcome extends React.Component{
     constructor(props){
         super(props);
         this.handleForm = this.handleForm.bind(this);
-        this.getName = props.getName;
     }
     handleForm(e){
         e.preventDefault();
         const name = e.target.elements.name.value;
         if(name){
-            this.getName(name);
+            this.props.getName(name);
         }
     }
     render(){

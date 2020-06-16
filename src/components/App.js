@@ -9,6 +9,7 @@ class App extends React.Component{
         super(props);
         this.getName = this.getName.bind(this);
         this.getListName = this.getListName.bind(this);
+        this.deleteList = this.deleteList.bind(this);
         this.state = {
             display: false,
             name: '',
@@ -37,6 +38,15 @@ class App extends React.Component{
             };
         })
     }
+    deleteList(name){
+        this.setState((prevState) => {
+            return {
+                listNames: prevState.listNames.filter((list) => {
+                    return list!==name;
+                })
+            };
+        });
+    }
     render(){
         return (
             <React.Fragment>
@@ -46,7 +56,7 @@ class App extends React.Component{
                 <AddList getListName={this.getListName}/>
                 {this.state.listNames.length===0?<p>Add some lists!</p>:
                 this.state.listNames.map((listname) => {
-                    return <List key={listname} listName={listname} />;
+                    return <List key={listname} listName={listname} deleteList={this.deleteList} />;
                 })}
                 </div>
                 }

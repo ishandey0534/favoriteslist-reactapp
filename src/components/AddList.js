@@ -4,13 +4,12 @@ export default class AddList extends React.Component{
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.getListName = props.getListName;
     }
     handleSubmit(e){
         e.preventDefault();
         const listName = e.target.elements.listName.value;
         if(listName){
-            this.getListName(listName);
+            this.props.getListName(listName);
             e.target.elements.listName.value='';
         }
     }
