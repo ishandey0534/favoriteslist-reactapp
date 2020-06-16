@@ -11,9 +11,10 @@ class List extends React.Component{
     }
     render(){
         return (
-            <div>
-                <h4>Favorite {this.props.listName} - <button onClick={this.handleClick}>Delete</button></h4>
+            <div className="list">
+                <h4 className="list-title">Favorite {this.props.listName} - <button onClick={this.handleClick}>Delete</button></h4>
                 <Options />
+                <hr />
             </div>
         );
     }

@@ -15,7 +15,7 @@ class Form extends React.Component{
     }
    render(){
        return (
-        <form onSubmit={this.handleForm}>
+        <form className="option-form" onSubmit={this.handleForm}>
             <input name="name" type="text" placeholder="Add something" />
             <button>Add</button>
         </form>

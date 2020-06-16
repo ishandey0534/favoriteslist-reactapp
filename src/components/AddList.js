@@ -15,7 +15,7 @@ export default class AddList extends React.Component{
     }
     render(){
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className="addlist-form" onSubmit={this.handleSubmit}>
                 <input name="listName" type="text" placeholder="List Name" />
                 <button>Submit</button>
             </form>

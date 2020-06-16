@@ -54,7 +54,7 @@ class App extends React.Component{
                 <div>
                 <Header name={this.state.name}/>
                 <AddList getListName={this.getListName}/>
-                {this.state.listNames.length===0?<p>Add some lists!</p>:
+                {this.state.listNames.length===0?<p className="some-text">Add some lists!</p>:
                 this.state.listNames.map((listname) => {
                     return <List key={listname} listName={listname} deleteList={this.deleteList} />;
                 })}

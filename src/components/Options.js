@@ -33,7 +33,7 @@ class Options extends React.Component {
                 {this.state.options.length!=0?this.state.options.map((option) => {
                     return <Option key={option} removeOption={this.removeOption}>{option}</Option>
                 })
-                :<p>No options</p>}
+                :<p className="some-text">No options</p>}
                 <Form addOption={this.addOption}/>
             </div>
         );

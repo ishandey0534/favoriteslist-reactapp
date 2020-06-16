@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/style.scss';
 
 export default class Welcome extends React.Component{
     constructor(props){
@@ -14,7 +15,7 @@ export default class Welcome extends React.Component{
     }
     render(){
         return (
-            <div>
+            <div className="Welcome">
                 <h2>Hi there!</h2>
                 <h3>Please enter your name...</h3>
                 <form onSubmit={this.handleForm}>

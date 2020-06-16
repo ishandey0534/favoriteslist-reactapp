@@ -10,7 +10,7 @@ class Option extends React.Component{
     }
     render(){
         return (
-            <div>
+            <div className="option">
                 <p>{this.props.children}<button onClick={this.handleClick}>Remove</button></p>
             </div>
         );
