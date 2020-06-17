@@ -1,8 +1,14 @@
 .Title{
+    background-color: black;
     padding: 30px 10px;
+  }
+  .Title *{
+    background-color: black;
+    color: white;
   }
   .Msg{
     padding: 40px 10px;
+    color: black;
   }
   .Title h3{
     padding-top: 10px;
